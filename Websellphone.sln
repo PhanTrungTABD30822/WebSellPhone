@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SellPhoneUntilities", "Sell
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SellPhoneVIewModel", "SellPhoneVIewModel\SellPhoneVIewModel.csproj", "{5B014FE3-713C-4151-963F-1DB098D67691}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebsellphoneAdmin", "..\WEB_Ban_Dien_Thoai\WEB_Ban_Dien_Thoai\WebsellphoneAdmin\WebsellphoneAdmin.csproj", "{2B84482A-E134-46B3-B6B5-DD7A0BEB29C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebsellphoneAdmin", "WebsellphoneAdmin\WebsellphoneAdmin.csproj", "{062C3CA8-D3B9-4C76-B294-8EA7B17A9946}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{5B014FE3-713C-4151-963F-1DB098D67691}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B014FE3-713C-4151-963F-1DB098D67691}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B014FE3-713C-4151-963F-1DB098D67691}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B84482A-E134-46B3-B6B5-DD7A0BEB29C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B84482A-E134-46B3-B6B5-DD7A0BEB29C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B84482A-E134-46B3-B6B5-DD7A0BEB29C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B84482A-E134-46B3-B6B5-DD7A0BEB29C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{062C3CA8-D3B9-4C76-B294-8EA7B17A9946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062C3CA8-D3B9-4C76-B294-8EA7B17A9946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062C3CA8-D3B9-4C76-B294-8EA7B17A9946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062C3CA8-D3B9-4C76-B294-8EA7B17A9946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

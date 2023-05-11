@@ -1,5 +1,6 @@
 using AspNetCoreHero.ToastNotification;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,7 +31,19 @@ namespace WebsellphoneAdmin
         {
             services.AddHttpClient();
 
+            
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+            {
+                options.LoginPath = "/Login/Index";
+                options.AccessDeniedPath = "/User/Forbidden/";
+            });
+
             services.AddControllersWithViews().AddRazorRuntimeCompilation().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
             services.AddNotyf(config => { config.DurationInSeconds = 10; config.IsDismissable = true; config.Position = NotyfPosition.BottomRight; });
 
             services.AddTransient<IUserApiClient, UserApiClient>();
@@ -52,10 +65,12 @@ namespace WebsellphoneAdmin
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseAuthentication();
+
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

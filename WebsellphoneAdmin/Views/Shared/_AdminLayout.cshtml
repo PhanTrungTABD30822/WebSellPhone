@@ -153,20 +153,23 @@
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div>
                                             <i class="anticon opacity-04 font-size-16 anticon-project"></i>
-                                            <span class="m-l-10">Projects</span>
+                                            <span class="m-l-10" href="/Profile/Index">@User.Identity.Name</span>
                                         </div>
                                         <i class="anticon font-size-10 anticon-right"></i>
                                     </div>
                                 </a>
-                                <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <i class="anticon opacity-04 font-size-16 anticon-logout"></i>
-                                            <span class="m-l-10">Logout</span>
+                                <form method="post" asp-controller="User" asp-action="Logout">
+                                    <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <i class="anticon opacity-04 font-size-16 anticon-logout"></i>
+                                                <button type="submit" class="dropdown-item">Log out</button>
+                                            </div>
+                                            <i class="anticon font-size-10 anticon-right"></i>
                                         </div>
-                                        <i class="anticon font-size-10 anticon-right"></i>
-                                    </div>
-                                </a>
+                                    </a>
+                                </form>
+                                
                             </div>
                         </li>
                         
