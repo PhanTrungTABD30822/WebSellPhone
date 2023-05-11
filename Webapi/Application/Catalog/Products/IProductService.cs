@@ -9,7 +9,7 @@ using SellPhoneVIewModel.Catalog.ProductImages;
 
 namespace Webapi.Catalog.Products
 {
-    public interface IManagerProductService
+    public interface IProductService
     {
         Task<int> Create(ProductCreateRequest request);
 
@@ -29,6 +29,7 @@ namespace Webapi.Catalog.Products
         Task<List<ProductImageViewModel>> GetListImage(int productId);
 
         Task<ProductImageViewModel> GetImageById(int imageId);
+        Task<PagedResult<ProductViewModel>> GetAllByCategoryId(string languageId, GetPublicProductPagingRequest request);
 
 
     }

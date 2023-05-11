@@ -13,6 +13,8 @@ namespace SellPhoneVIewModel.System.Users
 
         Task<bool> Register(RegisterRequest request);
 
-        
+        Task<PagedResult<UserViewModel>> GetUsersPaging(GetUserPagingRequest request);
+
+
     }
 }
